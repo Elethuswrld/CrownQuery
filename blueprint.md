@@ -6,6 +6,10 @@ CrownQuery is a web application designed to help users find the perfect wig. It 
 
 ## Implemented Features
 
+### Implemented (V2.5):
+*   **Enhanced Authentication:** Users can now sign in using their Google accounts. A "Forgot Password" feature has also been implemented.
+*   **Account Settings:** A dedicated account settings page where users can change their password or delete their account.
+
 ### Implemented (V2.4):
 *   **Saved Products:** Users can now save their favorite products to their profile. A "Save" button has been added to product cards, and a "Saved Products" section has been added to the profile page.
 
@@ -33,7 +37,7 @@ CrownQuery is a web application designed to help users find the perfect wig. It 
 *   **Styling:** Tailwind CSS.
 *   **Authentication:** Basic user login and signup functionality.
 
-## Current Plan: Advanced Account Management
+## Current Plan: Advanced Account Management (Completed)
 
 1.  **Enhanced Authentication:** Add features like social login and password resets.
 2.  **Account Settings:** Allow users to manage their account details.

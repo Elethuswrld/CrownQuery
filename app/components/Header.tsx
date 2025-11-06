@@ -61,6 +61,9 @@ export default function Header() {
             <Link href="/profile" className="text-sm font-semibold leading-6 text-primary hover:text-accent">
               Profile
             </Link>
+            <Link href="/account-settings" className="text-sm font-semibold leading-6 text-primary hover:text-accent">
+              Account Settings
+            </Link>
             <button
               onClick={handleLogout}
               className="text-sm font-semibold leading-6 text-primary hover:text-accent"
@@ -123,6 +126,13 @@ export default function Header() {
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-muted"
                     >
                       Profile
+                    </Link>
+                     <Link
+                      href="/account-settings"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-muted"
+                    >
+                      Account Settings
                     </Link>
                     <button
                       onClick={() => { 
