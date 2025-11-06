@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation'
 const navigation = [
   { name: 'Catalog', href: '/catalog' },
   { name: 'Style Quiz', href: '/quiz' },
-  { name: 'About', href: '#' },
+  { name: 'About', href: '/about' },
 ]
 
 export default function Header() {

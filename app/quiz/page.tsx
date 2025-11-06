@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { useAuth } from '@/app/AuthContext';
+import { saveQuizResults } from '@/app/actions';
 
 const quizQuestions = [
   {
@@ -38,6 +40,7 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const router = useRouter();
+  const { user } = useAuth();
 
   const handleAnswer = (answer: string) => {
     const newAnswers = [...selectedAnswers];
@@ -45,12 +48,17 @@ export default function QuizPage() {
     setSelectedAnswers(newAnswers);
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentQuestion < quizQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      const encodedAnswers = encodeURIComponent(JSON.stringify(selectedAnswers));
-      router.push(`/quiz/results?answers=${encodedAnswers}`);
+      if (user) {
+        await saveQuizResults(selectedAnswers);
+        router.push('/profile');
+      } else {
+        const encodedAnswers = encodeURIComponent(JSON.stringify(selectedAnswers));
+        router.push(`/quiz/results?answers=${encodedAnswers}`);
+      }
     }
   };
 
