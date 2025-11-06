@@ -1,3 +1,5 @@
 {
-  "IDX.agenticWorkspace": true
+  "files.exclude": {
+    "**/blueprint.md": true
+  }
 }
