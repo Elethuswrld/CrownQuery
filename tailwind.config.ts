@@ -29,6 +29,7 @@ const config: Config = {
         "gray-dark": "#374151",
         "pink-vibrant": "#EC4899",
         "purple-deep": "#7E22CE",
+        'gold': '#FFD700',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -22,8 +22,8 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-            <h1 className="font-montserrat text-4xl font-bold tracking-tight text-primary sm:text-6xl">
-              Find Your Perfect Crown
+            <h1 className="font-montserrat text-4xl font-bold tracking-tight text-primary sm:text-6xl flex items-center justify-center">
+              <span className="text-gold">♛</span> CrownQuery
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary">
               Discover the wig that expresses your unique style. Take our quiz and let us find the perfect match for you.

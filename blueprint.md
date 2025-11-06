@@ -7,25 +7,38 @@ A modern e-commerce application for a fictional company called "Crownquery". The
 
 ## Design and Features
 
+### Implemented (V6):
+
+*   **Enhanced User Profile:**
+    *   **Profile Updates:** Users can update their display name and photo URL.
+    *   **Optimized Images:** Implemented `next/image` for better image performance.
+
+### Implemented (V5):
+
+*   **User Profile & Protected Routes:**
+    *   **Profile Page:** Created a user profile page at `/profile`.
+    *   **Route Protection:** Implemented a `withAuth` Higher-Order Component (HOC) to protect routes from unauthenticated access.
+    *   **Header Link:** Added a link to the profile page in the header for authenticated users.
+
 ### Implemented (V4):
 
 *   **User Authentication:**
     *   **Firebase Setup:** Added Firebase to the project and configured Firebase Authentication.
-    *   **Authentication UI:** Created new sign-up (`/signup`) and login (`/login`) pages with a modern design.
-    *   **Authentication Logic:** Implemented sign-up, login, and logout functionality using Firebase Authentication.
+    *   **Authentication UI:** Created new sign-up (`/signup`) and login (`/login`) pages.
+    *   **Authentication Logic:** Implemented sign-up, login, and logout functionality.
     *   **Session Management:** A client-side `AuthContext` manages the user's session.
-    *   **Dynamic Header:** The header now dynamically displays login/logout/signup buttons based on the user's authentication state.
+    *   **Dynamic Header:** The header dynamically displays login/logout/signup buttons.
 
 ### Implemented (V3):
 
-*   **Product Recommendation Logic:** A simple recommendation algorithm has been implemented to suggest a product to the user based on their quiz answers.
-*   **Reusable Product Card:** A generic `ProductCard.tsx` component has been created to display products consistently across the application.
-*   **Dynamic Home Page:** The home page now dynamically displays products from the `products.ts` file.
+*   **Product Recommendation Logic:** Implemented a simple product recommendation algorithm.
+*   **Reusable Product Card:** Created a generic `ProductCard.tsx` component.
+*   **Dynamic Home Page:** The home page dynamically displays products.
 
 ### Implemented (V2.2):
 
-*   **Quiz Results Page:** A results page at `/quiz/results` to display the user's quiz answers.
-*   **Quiz to Results Navigation:** The quiz page now seamlessly navigates to the results page upon completion.
+*   **Quiz Results Page:** A results page at `/quiz/results`.
+*   **Quiz to Results Navigation:** Seamless navigation from the quiz to the results page.
 
 ### Implemented (V2.1):
 
@@ -40,15 +53,15 @@ A modern e-commerce application for a fictional company called "Crownquery". The
 *   **Core Framework:** Next.js with App Router.
 *   **Styling:** Tailwind CSS.
 
-## Current Plan: User Profile & Protected Routes
+## Current Plan: Advanced Account Management
 
-*   **Objective:** Create a protected user profile page that is only accessible to authenticated users.
+*   **Objective:** Add password reset and account deletion functionality to the profile page.
 *   **Steps:**
-    *   [ ] **Create Profile Page:**
-        *   [ ] Create a new page at `/profile`.
-        *   [ ] Design the page to display user information (e.g., email).
-    *   [ ] **Implement Route Protection:**
-        *   [ ] Create a Higher-Order Component (HOC) named `withAuth` to wrap protected pages.
-        *   [ ] This HOC will check for an authenticated user and redirect to `/login` if the user is not signed in.
-    *   [ ] **Update Header:**
-        *   [ ] Add a link to the `/profile` page in the header for authenticated users.
+    *   [ ] **Add "Change Password" Feature:**
+        *   [ ] Add a "Change Password" button to the profile page.
+        *   [ ] Implement a function to send a password reset email using `sendPasswordResetEmail` from Firebase Authentication.
+        *   [ ] Display a confirmation message to the user.
+    *   [ ] **Add "Delete Account" Feature:**
+        *   [ ] Add a "Delete Account" button to the profile page.
+        *   [ ] Implement a function to delete the user's account using `deleteUser` from Firebase Authentication.
+        *   [ ] Redirect the user to the home page after their account is deleted.
