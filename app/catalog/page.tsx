@@ -1,14 +1,13 @@
 import ProductCard from '@/app/components/ProductCard';
 import { products } from '@/app/lib/products';
-import { auth } from "@/lib/firebase-server";
-import { firestore } from "@/lib/firebase-admin";
+import { auth, db } from "@/lib/firebase/admin";
 
 export default async function Catalog() {
     let savedProducts: string[] = [];
     try {
-        const user = await auth().currentUser();
+        const user = auth().currentUser;
         if (user) {
-            const savedProductsSnapshot = await firestore.collection('savedProducts').where('userId', '==', user.uid).get();
+            const savedProductsSnapshot = await db.collection('savedProducts').where('userId', '==', user.uid).get();
             savedProducts = savedProductsSnapshot.docs.map(doc => doc.data().productId);
         }
     } catch (error) {

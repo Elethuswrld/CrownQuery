@@ -1,5 +1,5 @@
 
-import admin from '@/lib/firebaseAdmin';
+import { db } from '@/lib/firebase/admin';
 import Hero from '@/app/components/home/Hero';
 import ProductGrid from '@/app/components/home/ProductGrid';
 import ShopByStyle from '@/app/components/home/ShopByStyle';
@@ -7,7 +7,6 @@ import Newsletter from '@/app/components/home/Newsletter';
 import { Product } from '@/app/lib/products';
 
 async function getCrownQueryData(): Promise<Product[]> {
-  const db = admin;
   const snapshot = await db.collection('crownQuery').get();
   
   // Basic data transformation, to be improved with real data

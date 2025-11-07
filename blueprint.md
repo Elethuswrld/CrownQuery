@@ -11,3 +11,4 @@ CrownQuery is a modern e-commerce application designed to provide a seamless and
 *   **Saved Products:** An integrated "Save for Later" feature that allows users to keep track of their favorite crowns.
 *   **Modern Design System:** A sophisticated design system with a unique color palette, custom fonts, and modern UI components.
 *   **Robust Error Handling:** The application is designed to gracefully handle errors and prevent crashes, ensuring a smooth and uninterrupted user experience.
+*   **Centralized Firebase Admin:** The application now uses a centralized Firebase Admin utility to prevent server crashes and ensure a consistent and reliable connection to the database.
