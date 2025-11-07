@@ -1,33 +1,38 @@
 export interface Product {
-  id: number;
-  name: string;
-  imageUrl: string;
-  style: string;
+    id: string;
+    name: string;
+    style: string;
+    price: string;
+    imageUrl: string;
 }
 
 export const products: Product[] = [
-  {
-    id: 1,
-    name: 'Classic Elegance',
-    imageUrl: '/placeholder.svg',
-    style: 'A',
-  },
-  {
-    id: 2,
-    name: 'Sassy Bob',
-    imageUrl: '/placeholder.svg',
-    style: 'B',
-  },
-  {
-    id: 3,
-    name: 'Regal Updo',
-    imageUrl: '/placeholder.svg',
-    style: 'C',
-  },
-  {
-    id: 4,
-    name: 'Intricate Braids',
-    imageUrl: '/placeholder.svg',
-    style: 'D',
-  },
+    {
+        id: '1',
+        name: 'The Aurelia Crown',
+        style: 'Modern',
+        price: '$125',
+        imageUrl: '/images/modern.jpg',
+    },
+    {
+        id: '2',
+        name: 'The Seraphina Crown',
+        style: 'Vintage',
+        price: '$200',
+        imageUrl: '/images/vintage.jpg',
+    },
+    {
+        id: '3',
+        name: 'The Ophelia Crown',
+        style: 'Bohemian',
+        price: '$95',
+        imageUrl: '/images/bohemian.jpg',
+    },
+    {
+        id: '4',
+        name: 'The Flora Crown',
+        style: 'Floral',
+        price: '$150',
+        imageUrl: '/images/floral.jpg',
+    },
 ];
