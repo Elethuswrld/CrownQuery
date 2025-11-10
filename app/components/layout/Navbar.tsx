@@ -69,18 +69,22 @@ export default function Navbar() {
                         </Button>
 
                         {mounted && user && (
-                            <>
+                            <div className="flex items-center gap-2">
                                 <Link href="/profile">
-                                    <Button variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
-                                        <User className="h-6 w-6" />
-                                        <span className="sr-only">User Profile</span>
+                                    <Button variant="ghost" className="hidden md:inline-flex items-center gap-2">
+                                        {user.photoURL ? (
+                                            <img src={user.photoURL} alt="user profile" className="h-6 w-6 rounded-full" />
+                                        ) : (
+                                            <User className="h-6 w-6" />
+                                        )}
+                                        <span className="text-sm font-medium">{user.displayName}</span>
                                     </Button>
                                 </Link>
-                                <Button onClick={signOut} variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
+                                <Button onClick={signOut} variant="ghost" size="icon" className="hidden md:inline-flex" title="Sign Out">
                                     <LogOut className="h-6 w-6" />
                                     <span className="sr-only">Sign Out</span>
                                 </Button>
-                            </>
+                            </div>
                         )}
                         {mounted && !user && (
                             <Button onClick={signInWithGoogle} variant="outline" suppressHydrationWarning>
@@ -110,8 +114,12 @@ export default function Navbar() {
                                         {mounted && user && (
                                             <>
                                                 <Link href="/profile" className="flex items-center gap-2 font-medium" prefetch={false}>
-                                                    <User className="h-5 w-5" />
-                                                    User Profile
+                                                     {user.photoURL ? (
+                                                        <img src={user.photoURL} alt="user profile" className="h-6 w-6 rounded-full" />
+                                                    ) : (
+                                                        <User className="h-5 w-5" />
+                                                    )}
+                                                    <span>{user.displayName}</span>
                                                 </Link>
                                                 <Button onClick={signOut} className="w-full justify-start flex items-center gap-2 font-medium" variant="ghost">
                                                     <LogOut className="h-5 w-5" />
