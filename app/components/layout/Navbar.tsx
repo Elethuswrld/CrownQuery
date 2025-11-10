@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
 import { Button } from "@/app/components/ui/button"
@@ -73,7 +74,7 @@ export default function Navbar() {
                                 <Link href="/profile">
                                     <Button variant="ghost" className="hidden md:inline-flex items-center gap-2">
                                         {user.photoURL ? (
-                                            <img src={user.photoURL} alt="user profile" className="h-6 w-6 rounded-full" />
+                                            <Image src={user.photoURL} alt="user profile" width={24} height={24} className="rounded-full" />
                                         ) : (
                                             <User className="h-6 w-6" />
                                         )}
@@ -117,7 +118,7 @@ export default function Navbar() {
                                             <>
                                                 <Link href="/profile" className="flex items-center gap-2 font-medium" prefetch={false}>
                                                      {user.photoURL ? (
-                                                        <img src={user.photoURL} alt="user profile" className="h-6 w-6 rounded-full" />
+                                                        <Image src={user.photoURL} alt="user profile" width={24} height={24} className="rounded-full" />
                                                     ) : (
                                                         <User className="h-5 w-5" />
                                                     )}
