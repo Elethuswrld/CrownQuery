@@ -56,6 +56,7 @@ The following changes were implemented to resolve a persistent hydration error a
 *   **Server Action:** Implemented a Server Action at `app/contact/actions.ts` to process the form submission. This includes server-side validation using Zod.
 *   **Updated Navigation:** The "Contact" links in the `Navbar` (`app/components/layout/Navbar.tsx`) now correctly navigate to the new contact page.
 *   **Design:** The contact page is designed to be consistent with the site's modern aesthetic, featuring a clean layout, clear typography, and contact information with icons.
+*   **Linting:** Fixed an unescaped entity error in the contact page.
 
 ### Style Quiz & Personalized Catalog
 
@@ -76,17 +77,27 @@ The following changes were implemented to resolve a persistent hydration error a
 *   **Checkout Form:** The form collects the customer's full name, address, phone number, and email address.
 *   **Firebase Integration:** The form is integrated with Firebase to store order information in the `orders` collection.
 
-## Current Plan: Refine Website
+### Homepage Enhancements
+
+*   **"Why CrownQuery?" Section:** Added a new section to the homepage (`app/components/home/WhyCrownQuery.tsx`) that highlights the key benefits of the platform, such as expert curation, quality assurance, and a personalized experience.
+*   **Featured Products Carousel:**
+    *   Replaced the static `ProductGrid` with a dynamic `FeaturedProducts` carousel (`app/components/home/FeaturedProducts.tsx`).
+    *   Installed and configured `embla-carousel-react` and `embla-carousel-autoplay` for the carousel functionality.
+    *   Added custom styles to `app/globals.css` to ensure the carousel is responsive and visually appealing.
+
+## Current Plan: Homepage Refinement
 
 **Status:** Completed.
 
-**Goal:** Refine the website by adding a privacy policy, FAQ page, and a checkout form to collect customer information for delivery.
+**Goal:** Enhance the homepage by adding a "Why CrownQuery?" section and converting the featured products grid into an autoplaying carousel.
 
 **Steps Taken:**
 
-1.  **Created Privacy Policy Page:** Created a `privacy-policy` page with the provided content.
-2.  **Created FAQ Page:** Created a `faq` page with placeholder content.
-3.  **Created Footer:** Created a `Footer` component and added it to the main layout.
-4.  **Created Order Page:** Created an `order` page with a checkout form to collect customer information.
+1.  **Created "Why CrownQuery?" Component:** A new component was created to showcase the brand's value propositions.
+2.  **Installed Carousel Dependencies:** Added `embla-carousel-react` and `embla-carousel-autoplay` to the project.
+3.  **Created FeaturedProducts Component:** A new carousel component was built to display featured products, replacing the old grid.
+4.  **Updated Homepage:** The main page was updated to include the new "Why CrownQuery?" section and the `FeaturedProducts` carousel.
+5.  **Styled Carousel:** Added responsive styles for the Embla carousel in `globals.css`.
+6.  **Fixed Linting Error:** Resolved an unescaped entity error on the contact page.
 
 **Next Step:** Awaiting the next user request.

@@ -1,13 +1,13 @@
-import { db } from '@/lib/firebase/server'; // Corrected: Import from the reliable singleton module
+import { db } from '@/lib/firebase/server';
 import Hero from '@/app/components/home/Hero';
-import ProductGrid from '@/app/components/home/ProductGrid';
+import FeaturedProducts from '@/app/components/home/FeaturedProducts';
+import WhyCrownQuery from '@/app/components/home/WhyCrownQuery';
 import ShopByStyle from '@/app/components/home/ShopByStyle';
 import Newsletter from '@/app/components/home/Newsletter';
 import { Product } from '@/app/lib/products';
 
 async function getProductData(): Promise<Product[]> {
   try {
-    // Corrected: Query the "products" collection as seeded in the layout
     const snapshot = await db.collection('products').get();
 
     if (snapshot.empty) {
@@ -24,7 +24,7 @@ async function getProductData(): Promise<Product[]> {
     }));
   } catch (error) {
     console.error("Error fetching product data:", error);
-    return []; // Return an empty array on error to prevent crashing the page
+    return [];
   }
 }
 
@@ -34,7 +34,8 @@ export default async function HomePage() {
   return (
     <main>
       <Hero />
-      <ProductGrid products={products} />
+      <FeaturedProducts products={products} />
+      <WhyCrownQuery />
       <ShopByStyle />
       <Newsletter />
     </main>

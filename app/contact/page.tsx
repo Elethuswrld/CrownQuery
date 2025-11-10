@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-center mb-8 font-montserrat">Contact Us</h1>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            We'd love to hear from you. Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.
+            We&apos;d love to hear from you. Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
