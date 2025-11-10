@@ -23,7 +23,7 @@ export default function Results() {
             <CardContent className="grid grid-cols-2 gap-4">
                 <div>
                     <p><strong>Hair Type:</strong> {searchParams.get('hairType')}</p>
-                    <p><strong>Hair Color:</strong> {search_params.get('hairColor')}</p>
+                    <p><strong>Hair Color:</strong> {searchParams.get('hairColor')}</p>
                 </div>
                 <div>
                     <p><strong>Hair Length:</strong> {searchParams.get('hairLength')}</p>
