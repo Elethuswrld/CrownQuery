@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/app/AuthContext";
-import Navbar from "./components/layout/Navbar"; // Corrected import
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import { products } from "@/app/lib/products";
 import { db } from "@/lib/firebase/server"; // Import from the new reliable singleton module
 

@@ -64,15 +64,29 @@ The following changes were implemented to resolve a persistent hydration error a
 *   **Personalized Catalog:** Created a results page to display recommended products.
 *   **Updated About Page:** Link the "Style Quiz" text to the new quiz page.
 
-## Current Plan: Update Navigation
+### Footer & Legal Pages
+
+*   **Privacy Policy:** Created a `privacy-policy` page with detailed information about data collection, usage, and user rights.
+*   **FAQ Page:** Created a `faq` page to answer common customer questions.
+*   **Footer:** Added a comprehensive footer to the main layout, including links to the new `privacy-policy` and `faq` pages, as well as contact information and social media links.
+
+### Order & Checkout
+
+*   **Order Page:** Created an `order` page with a checkout form to collect customer information for manual delivery.
+*   **Checkout Form:** The form collects the customer's full name, address, phone number, and email address.
+*   **Firebase Integration:** The form is integrated with Firebase to store order information in the `orders` collection.
+
+## Current Plan: Refine Website
 
 **Status:** Completed.
 
-**Goal:** Add a link to the Style Quiz page in the main navigation bar and ensure the About Us page is correctly linked.
+**Goal:** Refine the website by adding a privacy policy, FAQ page, and a checkout form to collect customer information for delivery.
 
 **Steps Taken:**
 
-1.  **Updated `Navbar.tsx`:** Added "Style Quiz" to both the desktop and mobile navigation menus.
-2.  **Verified "About Us" Link:** Confirmed that the "About Us" link correctly navigates to the `/about` page.
+1.  **Created Privacy Policy Page:** Created a `privacy-policy` page with the provided content.
+2.  **Created FAQ Page:** Created a `faq` page with placeholder content.
+3.  **Created Footer:** Created a `Footer` component and added it to the main layout.
+4.  **Created Order Page:** Created an `order` page with a checkout form to collect customer information.
 
 **Next Step:** Awaiting the next user request.
