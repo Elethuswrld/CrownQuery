@@ -6,6 +6,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { products } from "@/app/lib/products";
 import { db } from "@/lib/firebase/server"; // Import from the new reliable singleton module
+import { ThemeProvider } from "@/app/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
@@ -41,11 +42,18 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${montserrat.variable}`}>
-        <AuthProvider>
-          <Navbar />
-          <main className="pt-16">{children}</main> {/* Add padding to avoid overlap */}
-          <Footer />
-        </AuthProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AuthProvider>
+            <Navbar />
+            <main className="pt-16">{children}</main> {/* Add padding to avoid overlap */}
+            <Footer />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

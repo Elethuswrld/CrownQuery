@@ -28,28 +28,28 @@ export default function ProductCard({ product, isSaved }: ProductCardProps) {
 
   return (
     <div className="group relative">
-       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-muted lg:aspect-none group-hover:opacity-75 lg:h-80">
+       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-card lg:aspect-none group-hover:opacity-75 lg:h-80">
         <Image
             src={product.imageUrl}
             alt={product.name}
             className="h-full w-full object-cover object-center lg:h-full lg:w-full" 
             width={500}
             height={500}        />
-        <button onClick={handleSave} className="absolute top-2 right-2 p-2 rounded-full bg-white/50 backdrop-blur-sm transition-colors hover:bg-white/75">
-            <Heart className={`w-6 h-6 ${saved ? 'text-red-500 fill-current' : 'text-gray-500'}`} />
+        <button onClick={handleSave} className="absolute top-2 right-2 p-2 rounded-full bg-background/50 backdrop-blur-sm transition-colors hover:bg-background/75">
+            <Heart className={`w-6 h-6 ${saved ? 'text-red-500 fill-current' : 'text-muted-foreground'}`} />
         </button>
       </div>
       <div className="mt-4 flex justify-between">
         <div>
-          <h3 className="text-sm text-primary">
+          <h3 className="text-sm text-foreground">
             <a href="#">
               <span aria-hidden="true" className="absolute inset-0" />
               {product.name}
             </a>
           </h3>
-          <p className="mt-1 text-sm text-secondary">{product.style}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{product.style}</p>
         </div>
-        <p className="text-sm font-medium text-primary">{product.price}</p>
+        <p className="text-sm font-medium text-foreground">{product.price}</p>
       </div>
     </div>
   );

@@ -6,52 +6,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 240 10% 3.9%; /* Dark Blue */
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 262 82% 56%; /* Vibrant Purple */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 13% 91%; /* Light Gray */
-    --secondary-foreground: 240 10% 3.9%;
-    --muted: 220 13% 96%;
-    --muted-foreground: 240 4% 46%;
-    --accent: 358 75% 58%; /* Bright Red */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262 82% 56%;
+    --background: theme(colors.crown.white);
+    --foreground: theme(colors.crown.black);
+    --card: theme(colors.crown.white);
+    --card-foreground: theme(colors.crown.black);
+    --popover: theme(colors.crown.white);
+    --popover-foreground: theme(colors.crown.black);
+    --primary: theme(colors.crown.purple);
+    --primary-foreground: theme(colors.crown.white);
+    --secondary: theme(colors.crown.gray);
+    --secondary-foreground: theme(colors.crown.charcoal);
+    --muted: theme(colors.crown.gray);
+    --muted-foreground: theme(colors.crown.charcoal);
+    --accent: theme(colors.crown.gold);
+    --accent-foreground: theme(colors.crown.black);
+    --destructive: theme(colors.crown.rose);
+    --destructive-foreground: theme(colors.crown.white);
+    --border: theme(colors.crown.gray);
+    --input: theme(colors.crown.gray);
+    --ring: theme(colors.crown.purple);
     --radius: 0.5rem;
-
-    --gold: 45 90% 55%;
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* Dark Blue */
-    --foreground: 0 0% 98%; /* Almost White */
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 262 82% 56%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 4% 10%;
-    --muted-foreground: 0 0% 62%;
-    --accent: 358 75% 58%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 262 82% 56%;
-
-    --gold: 45 90% 55%;
+    --background: theme(colors.crown.black);
+    --foreground: theme(colors.crown.white);
+    --card: theme(colors.crown.black);
+    --card-foreground: theme(colors.crown.white);
+    --popover: theme(colors.crown.black);
+    --popover-foreground: theme(colors.crown.white);
+    --primary: theme(colors.crown.purple);
+    --primary-foreground: theme(colors.crown.white);
+    --secondary: theme(colors.crown.charcoal);
+    --secondary-foreground: theme(colors.crown.white);
+    --muted: theme(colors.crown.charcoal);
+    --muted-foreground: theme(colors.crown.white);
+    --accent: theme(colors.crown.gold);
+    --accent-foreground: theme(colors.crown.black);
+    --destructive: theme(colors.crown.rose);
+    --destructive-foreground: theme(colors.crown.white);
+    --border: theme(colors.crown.charcoal);
+    --input: theme(colors.crown.charcoal);
+    --ring: theme(colors.crown.purple);
   }
 }
 

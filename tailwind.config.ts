@@ -52,7 +52,17 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: '#FFD700',
+        crown: {
+          black: "#0A0A0A",
+          white: "#FFFFFF",
+          purple: "#6B21A8",
+          gold: "#FACC15",
+          gray: "#F3F4F6",
+          charcoal: "#1F2937",
+          emerald: "#10B981",
+          rose: "#F43F5E",
+          sky: "#3B82F6",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,7 +76,7 @@ const config = {
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
       },
       animation: {
