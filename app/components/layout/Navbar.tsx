@@ -22,7 +22,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
                         <Link href="#" className="flex items-center gap-2" prefetch={false}>
                             <Crown className="h-8 w-8 text-gold" />
-                            <span className="text-2xl font-bold text-gray-900 dark:text-gray-50 font-montserrat">Crown</span>
+                            <span className="text-2xl font-bold text-gray-900 dark:text-gray-50 font-montserrat">CrownQuery</span>
                         </Link>
                         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
                             <Link
