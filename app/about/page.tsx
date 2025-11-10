@@ -1,5 +1,6 @@
 
 import { Crown, Heart, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -35,7 +36,7 @@ export default function AboutPage() {
                 CrownQuery was born from a simple idea: to make the process of finding the perfect wig a fun and empowering experience. We were tired of the endless scrolling and the uncertainty of online shopping. We wanted to create a more personalized and engaging way for people to discover wigs that they would love.
               </p>
               <p className="mt-4 text-lg text-secondary">
-                That&apos;s when we came up with the idea for our Style Quiz. By answering a few simple questions, our algorithm can recommend a curated selection of wigs that are tailored to your preferences. We&apos;re passionate about helping you find a wig that not only looks great but also makes you feel confident and beautiful.
+                That&apos;s when we came up with the idea for our <Link href="/style-quiz" className="text-accent hover:underline">Style Quiz</Link>. By answering a few simple questions, our algorithm can recommend a curated selection of wigs that are tailored to your preferences. We&apos;re passionate about helping you find a wig that not only looks great but also makes you feel confident and beautiful.
               </p>
             </div>
 

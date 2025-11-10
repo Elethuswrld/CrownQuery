@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+                        <Link href="/" className="flex items-center gap-2" prefetch={false}>
                             <Crown className="h-8 w-8 text-gold" />
                             <span className="text-2xl font-bold text-gray-900 dark:text-gray-50 font-montserrat">CrownQuery</span>
                         </Link>
@@ -38,6 +38,13 @@ export default function Navbar() {
                                 prefetch={false}
                             >
                                 Catalog
+                            </Link>
+                            <Link
+                                href="/style-quiz"
+                                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
+                                prefetch={false}
+                            >
+                                Style Quiz
                             </Link>
                             <Link
                                 href="/about"
@@ -92,6 +99,7 @@ export default function Navbar() {
                                 <div className="grid gap-4 p-6">
                                     <Link href="/" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Home</Link>
                                     <Link href="/catalog" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Catalog</Link>
+                                    <Link href="/style-quiz" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Style Quiz</Link>
                                     <Link href="/about" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>About</Link>
                                     <Link href="/contact" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Contact</Link>
                                     <div className="border-t pt-4 grid gap-2">
