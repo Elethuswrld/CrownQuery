@@ -1,15 +1,15 @@
 'use client'
 
 import { useFormState } from 'react-dom'
-import { submitContactForm } from './actions'
+import { submitContactForm, type FormState } from './actions'
 import { Input } from "@/app/components/ui/input"
 import { Textarea } from "@/app/components/ui/textarea"
 import { Button } from "@/app/components/ui/button"
 import { Mail, Phone, MapPin } from 'lucide-react'
 
-const initialState = {
-  message: null,
-  errors: null
+const initialState: FormState = {
+  message: "",
+  errors: {}
 }
 
 export default function ContactPage() {

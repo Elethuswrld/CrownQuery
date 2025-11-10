@@ -8,7 +8,19 @@ const schema = z.object({
   message: z.string().min(10, { message: 'Message must be at least 10 characters long.' })
 })
 
-export async function submitContactForm(prevState: any, formData: FormData) {
+export type FormState = {
+    errors?: {
+        name?: string[];
+        email?: string[];
+        message?: string[];
+    };
+    message?: string;
+};
+
+export async function submitContactForm(
+    prevState: FormState,
+    formData: FormData
+): Promise<FormState> {
   const validatedFields = schema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
