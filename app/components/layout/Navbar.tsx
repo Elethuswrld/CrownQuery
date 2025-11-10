@@ -47,7 +47,7 @@ export default function Navbar() {
                                 About
                             </Link>
                             <Link
-                                href="#"
+                                href="/contact"
                                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
                                 prefetch={false}
                             >
@@ -93,7 +93,7 @@ export default function Navbar() {
                                     <Link href="/" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Home</Link>
                                     <Link href="/catalog" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Catalog</Link>
                                     <Link href="/about" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>About</Link>
-                                    <Link href="#" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Contact</Link>
+                                    <Link href="/contact" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Contact</Link>
                                     <div className="border-t pt-4 grid gap-2">
                                         <Link href="#" className="flex items-center gap-2 font-medium" prefetch={false}>
                                             <ShoppingBag className="h-5 w-5" />
