@@ -4,11 +4,11 @@ import Link from "next/link"
 import { useState, useEffect } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
 import { Button } from "@/app/components/ui/button"
-import { Menu, Crown, ShoppingBag, User } from 'lucide-react';
+import { Menu, Crown, ShoppingBag, User, LogOut } from 'lucide-react';
 import { useAuth } from "@/app/AuthContext";
 
 export default function Navbar() {
-    const { user, signInWithGoogle } = useAuth();
+    const { user, signInWithGoogle, signOut } = useAuth();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -62,12 +62,18 @@ export default function Navbar() {
                         </Button>
 
                         {mounted && user && (
-                            <Link href="/profile">
-                                <Button variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
-                                    <User className="h-6 w-6" />
-                                    <span className="sr-only">User Profile</span>
+                            <>
+                                <Link href="/profile">
+                                    <Button variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
+                                        <User className="h-6 w-6" />
+                                        <span className="sr-only">User Profile</span>
+                                    </Button>
+                                </Link>
+                                <Button onClick={signOut} variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
+                                    <LogOut className="h-6 w-6" />
+                                    <span className="sr-only">Sign Out</span>
                                 </Button>
-                            </Link>
+                            </>
                         )}
                         {mounted && !user && (
                             <Button onClick={signInWithGoogle} variant="outline" suppressHydrationWarning>
@@ -94,10 +100,16 @@ export default function Navbar() {
                                             Shopping Bag
                                         </Link>
                                         {mounted && user && (
-                                            <Link href="/profile" className="flex items-center gap-2 font-medium" prefetch={false}>
-                                                <User className="h-5 w-5" />
-                                                User Profile
-                                            </Link>
+                                            <>
+                                                <Link href="/profile" className="flex items-center gap-2 font-medium" prefetch={false}>
+                                                    <User className="h-5 w-5" />
+                                                    User Profile
+                                                </Link>
+                                                <Button onClick={signOut} className="w-full justify-start flex items-center gap-2 font-medium" variant="ghost">
+                                                    <LogOut className="h-5 w-5" />
+                                                    Sign Out
+                                                </Button>
+                                            </>
                                         )}
                                         {mounted && !user && (
                                             <Button onClick={signInWithGoogle} className="w-full" suppressHydrationWarning>
