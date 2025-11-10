@@ -610,3 +610,59 @@
 [debug] [2025-11-07T07:22:14.871Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
 [debug] [2025-11-07T07:22:14.871Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
 [debug] [2025-11-07T07:22:14.871Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:44.554Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:44.567Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:51.835Z] Running auto auth
+[debug] [2025-11-07T13:28:51.840Z] Running auto auth
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:51.950Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:51.950Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[debug] [2025-11-07T13:28:51.963Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:51.968Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:52.044Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:52.044Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:52.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:52.054Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:52.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:52.073Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:28:52.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:28:52.080Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:31:41.730Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:31:41.731Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:31:41.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:31:41.742Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[debug] [2025-11-07T13:31:41.752Z] No OAuth tokens found
+[debug] [2025-11-07T13:31:41.758Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/crownquery-app-2 [none]
+[debug] [2025-11-07T13:31:42.146Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/crownquery-app-2 200
+[debug] [2025-11-07T13:31:42.147Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/crownquery-app-2 {"projectNumber":"659249887333","projectId":"crownquery-app-2","lifecycleState":"ACTIVE","name":"crownquery-app-2","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-11-06T13:07:01.766700Z"}
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:32:02.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:32:02.499Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-07T13:32:02.511Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-07T13:32:02.512Z] > authorizing via signed-in user (elethuelza03@gmail.com)
+[debug] [2025-11-07T13:32:02.516Z] No OAuth tokens found
+[debug] [2025-11-07T13:32:02.519Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/crownquery-app-2/locations/-/backends 
+[debug] [2025-11-07T13:32:03.464Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/crownquery-app-2/locations/-/backends 403
+[debug] [2025-11-07T13:32:03.465Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/crownquery-app-2/locations/-/backends {"error":{"code":403,"message":"Firebase App Hosting API has not been used in project crownquery-app-2 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firebaseapphosting.googleapis.com/overview?project=crownquery-app-2 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"firebaseapphosting.googleapis.com","serviceTitle":"Firebase App Hosting API","consumer":"projects/crownquery-app-2","containerInfo":"crownquery-app-2","activationUrl":"https://console.developers.google.com/apis/api/firebaseapphosting.googleapis.com/overview?project=crownquery-app-2"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Firebase App Hosting API has not been used in project crownquery-app-2 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firebaseapphosting.googleapis.com/overview?project=crownquery-app-2 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/firebaseapphosting.googleapis.com/overview?project=crownquery-app-2"}]}]}}

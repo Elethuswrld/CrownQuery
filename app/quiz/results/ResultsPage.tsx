@@ -101,7 +101,7 @@ export default function ResultsPage() {
                         </ul>
                     </div>
                     <div className="order-1 md:order-2">
-                        <ProductCard product={recommendedProduct} />
+                        <ProductCard product={recommendedProduct} isSaved={false} />
                     </div>
                 </div>
 

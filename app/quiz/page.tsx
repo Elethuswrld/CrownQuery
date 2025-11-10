@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { useAuth } from '@/app/AuthContext';
-import { saveQuizResults } from '@/app/actions';
+// import { saveQuizResults } from '@/app/actions';
 
 const quizQuestions = [
   {
@@ -53,7 +53,7 @@ export default function QuizPage() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       if (user) {
-        await saveQuizResults(selectedAnswers);
+        // await saveQuizResults(selectedAnswers);
         router.push('/profile');
       } else {
         const encodedAnswers = encodeURIComponent(JSON.stringify(selectedAnswers));

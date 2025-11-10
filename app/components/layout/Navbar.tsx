@@ -1,0 +1,116 @@
+'use client'
+
+import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
+import { Button } from "@/app/components/ui/button"
+import { Menu, Crown, ShoppingBag, User } from 'lucide-react';
+import { useAuth } from "@/app/AuthContext";
+
+export default function Navbar() {
+    const { user, signInWithGoogle } = useAuth();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    return (
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm shadow-sm">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex h-16 items-center justify-between">
+                    <div className="flex items-center gap-4">
+                        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+                            <Crown className="h-8 w-8 text-gold" />
+                            <span className="text-2xl font-bold text-gray-900 dark:text-gray-50 font-montserrat">Crown</span>
+                        </Link>
+                        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+                            <Link
+                                href="/"
+                                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
+                                prefetch={false}
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                href="/catalog"
+                                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
+                                prefetch={false}
+                            >
+                                Catalog
+                            </Link>
+                            <Link
+                                href="/about"
+                                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
+                                prefetch={false}
+                            >
+                                About
+                            </Link>
+                            <Link
+                                href="#"
+                                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
+                                prefetch={false}
+                            >
+                                Contact
+                            </Link>
+                        </nav>
+                    </div>
+                    <div className="flex items-center gap-4" suppressHydrationWarning>
+                        <Button variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
+                            <ShoppingBag className="h-6 w-6" />
+                            <span className="sr-only">Shopping Bag</span>
+                        </Button>
+
+                        {mounted && user && (
+                            <Link href="/profile">
+                                <Button variant="ghost" size="icon" className="hidden md:inline-flex" suppressHydrationWarning>
+                                    <User className="h-6 w-6" />
+                                    <span className="sr-only">User Profile</span>
+                                </Button>
+                            </Link>
+                        )}
+                        {mounted && !user && (
+                            <Button onClick={signInWithGoogle} variant="outline" suppressHydrationWarning>
+                                Sign In
+                            </Button>
+                        )}
+                        
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon" className="md:hidden" suppressHydrationWarning>
+                                    <Menu className="h-6 w-6" />
+                                    <span className="sr-only">Toggle navigation menu</span>
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="right">
+                                <div className="grid gap-4 p-6">
+                                    <Link href="/" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Home</Link>
+                                    <Link href="/catalog" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Catalog</Link>
+                                    <Link href="/about" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>About</Link>
+                                    <Link href="#" className="font-medium hover:text-gray-900 dark:hover:text-gray-50" prefetch={false}>Contact</Link>
+                                    <div className="border-t pt-4 grid gap-2">
+                                        <Link href="#" className="flex items-center gap-2 font-medium" prefetch={false}>
+                                            <ShoppingBag className="h-5 w-5" />
+                                            Shopping Bag
+                                        </Link>
+                                        {mounted && user && (
+                                            <Link href="/profile" className="flex items-center gap-2 font-medium" prefetch={false}>
+                                                <User className="h-5 w-5" />
+                                                User Profile
+                                            </Link>
+                                        )}
+                                        {mounted && !user && (
+                                            <Button onClick={signInWithGoogle} className="w-full" suppressHydrationWarning>
+                                                Sign In
+                                            </Button>
+                                        )}
+                                    </div>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                </div>
+            </div>
+        </header>
+    )
+}
