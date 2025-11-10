@@ -39,21 +39,41 @@ The following changes were implemented to resolve a persistent hydration error a
     *   `@radix-ui/react-slot`
     *   `tailwindcss-animate`
 
-## Current Plan: Fix Hydration Error
+### Authentication Improvements
+
+*   **Popup Blocker Fix:** Switched the Firebase authentication method from `signInWithPopup` to `signInWithRedirect` in `app/AuthContext.tsx` to resolve browser popup blocking issues in the development environment.
+*   **Sign Out Functionality:**
+    *   Added a `signOut` function to the `AuthContext` (`app/AuthContext.tsx`).
+    *   Integrated a "Sign Out" button into the `Navbar` (`app/components/layout/Navbar.tsx`) that appears for authenticated users, providing a complete login/logout cycle.
+
+### Contact Page
+
+*   **New Route:** Created a dedicated contact page at `app/contact/page.tsx`.
+*   **Contact Form:**
+    *   Built a user-friendly contact form with fields for name, email, and message.
+    *   The form provides real-time validation feedback to the user.
+*   **New UI Component:** Created a reusable `Textarea` component at `app/components/ui/textarea.tsx` for multi-line text input.
+*   **Server Action:** Implemented a Server Action at `app/contact/actions.ts` to process the form submission. This includes server-side validation using Zod.
+*   **Updated Navigation:** The "Contact" links in the `Navbar` (`app/components/layout/Navbar.tsx`) now correctly navigate to the new contact page.
+*   **Design:** The contact page is designed to be consistent with the site's modern aesthetic, featuring a clean layout, clear typography, and contact information with icons.
+
+## Current Plan: Implement Contact Page & Fix Auth
 
 **Status:** Completed.
 
-**Goal:** Resolve the hydration error that was causing inconsistencies between the server-rendered and client-rendered application.
+**Goal:** Add a functional contact page and fix the authentication popup error.
 
 **Steps Taken:**
 
-1.  **Diagnose the issue:** The hydration error was likely caused by a mismatch in the rendered output, potentially due to browser extensions modifying the DOM, and a simple custom `Button` component that was not robust enough.
-2.  **Replace Button Component:** Replaced the custom `Button` with the `shadcn/ui` `Button`.
-3.  **Refactor for `shadcn/ui`:**
-    *   Installed `shadcn/ui` and its dependencies.
-    *   Updated `tailwind.config.ts` and `app/globals.css` to support `shadcn/ui` theming.
-    *   Created the `lib/utils.ts` helper file.
-4.  **Address Hydration in Navbar:** Modified the `Navbar` component to be a client component and delay rendering of buttons until after the initial client render.
-5.  **Verify:** Ran `npm run lint` to check for errors.
+1.  **Fix Auth Flow:**
+    *   Modified `app/AuthContext.tsx` to use `signInWithRedirect` instead of `signInWithPopup`.
+    *   Added `signOut` functionality to the auth context and the main navbar.
+2.  **Create `Textarea` Component:**
+    *   Built a new `textarea.tsx` component in `app/components/ui`.
+3.  **Build Contact Page:**
+    *   Created the server action `app/contact/actions.ts` with Zod validation.
+    *   Constructed the UI for the contact page at `app/contact/page.tsx` using the new server action and UI components.
+4.  **Update Navigation:**
+    *   Modified `app/components/layout/Navbar.tsx` to link to the new `/contact` page.
 
-**Next Step:** Waiting for user to confirm that the hydration error is resolved in the browser.
+**Next Step:** Awaiting the next user request.
