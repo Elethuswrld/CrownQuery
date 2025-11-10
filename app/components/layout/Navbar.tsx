@@ -8,7 +8,7 @@ import { Menu, Crown, ShoppingBag, User, LogOut } from 'lucide-react';
 import { useAuth } from "@/app/AuthContext";
 
 export default function Navbar() {
-    const { user, signInWithGoogle, signOut } = useAuth();
+    const { user, signOut } = useAuth();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -87,9 +87,11 @@ export default function Navbar() {
                             </div>
                         )}
                         {mounted && !user && (
-                            <Button onClick={signInWithGoogle} variant="outline" suppressHydrationWarning>
-                                Sign In
-                            </Button>
+                            <Link href="/login">
+                                <Button variant="outline" suppressHydrationWarning>
+                                    Sign In
+                                </Button>
+                            </Link>
                         )}
                         
                         <Sheet>
@@ -128,9 +130,11 @@ export default function Navbar() {
                                             </>
                                         )}
                                         {mounted && !user && (
-                                            <Button onClick={signInWithGoogle} className="w-full" suppressHydrationWarning>
-                                                Sign In
-                                            </Button>
+                                             <Link href="/login">
+                                                <Button className="w-full" suppressHydrationWarning>
+                                                    Sign In
+                                                </Button>
+                                            </Link>
                                         )}
                                     </div>
                                 </div>

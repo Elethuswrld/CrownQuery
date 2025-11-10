@@ -6,52 +6,50 @@
 
 @layer base {
   :root {
-    --background: 330 100% 98%; /* Light Blush Pink */
-    --foreground: 240 10% 3.9%;
-    --card: 330 100% 98%;
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Dark Blue */
+    --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
-    --popover: 330 100% 98%;
+    --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 330 80% 60%; /* Blush Pink */
+    --primary: 262 82% 56%; /* Vibrant Purple */
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 60% 90%; /* Lavender Mist */
+    --secondary: 220 13% 91%; /* Light Gray */
     --secondary-foreground: 240 10% 3.9%;
-    --muted: 270 60% 95%;
+    --muted: 220 13% 96%;
     --muted-foreground: 240 4% 46%;
-    --accent: 45 90% 60%; /* Gold */
-    --accent-foreground: 240 10% 3.9%;
+    --accent: 358 75% 58%; /* Bright Red */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 330 80% 90%;
-    --input: 330 80% 90%;
-    --ring: 330 80% 60%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 82% 56%;
     --radius: 0.5rem;
 
     --gold: 45 90% 55%;
   }
 
   .dark {
-    /* For now, we'll keep the dark theme colors simple. 
-       We can customize this further if you'd like. */
-    --background: 240 10% 3.9%;
-    --foreground: 330 100% 98%;
+    --background: 240 10% 3.9%; /* Dark Blue */
+    --foreground: 0 0% 98%; /* Almost White */
     --card: 240 10% 3.9%;
-    --card-foreground: 330 100% 98%;
+    --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
-    --popover-foreground: 330 100% 98%;
-    --primary: 330 80% 60%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 82% 56%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 60% 20%;
-    --secondary-foreground: 330 100% 98%;
-    --muted: 270 60% 15%;
-    --muted-foreground: 330 100% 92%;
-    --accent: 45 90% 60%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 10%;
+    --muted-foreground: 0 0% 62%;
+    --accent: 358 75% 58%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
-    --border: 270 60% 20%;
-    --input: 270 60% 20%;
-    --ring: 330 80% 60%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 262 82% 56%;
 
     --gold: 45 90% 55%;
   }
