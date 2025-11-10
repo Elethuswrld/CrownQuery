@@ -1,10 +1,8 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import ProductCard from '@/app/components/ProductCard';
-import { db } from "@/lib/firebase/client"; // Using client-side db
-import { Product } from '@/app/lib/products';
-import { collection, getDocs } from "firebase/firestore";
+import { products as allProducts, Product } from '@/app/lib/products';
 import { Button } from '@/app/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 import { Sheet, SheetTrigger, SheetContent } from '@/app/components/ui/sheet';
@@ -14,25 +12,9 @@ import { ProductForm } from '@/app/components/ProductForm';
 const styles = ['Modern', 'Vintage', 'Bohemian', 'Floral'];
 
 export default function Catalog() {
-    const [products, setProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(true);
     const [savedProducts, setSavedProducts] = useState<string[]>([]);
     const [styleFilters, setStyleFilters] = useState<string[]>([]);
     const [sortOption, setSortOption] = useState('newest');
-
-    useEffect(() => {
-        async function fetchProducts() {
-            try {
-                const productsSnapshot = await getDocs(collection(db, "products"));
-                const productsData: Product[] = productsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Product));
-                setProducts(productsData);
-            } catch (error) {
-                console.error("Error fetching products: ", error);
-            }
-            setLoading(false);
-        }
-        fetchProducts();
-    }, []);
 
     const handleStyleFilterChange = (style: string) => {
         setStyleFilters(prev => 
@@ -41,28 +23,27 @@ export default function Catalog() {
     };
 
     const filteredAndSortedProducts = useMemo(() => {
-        let filtered = products;
+        let filtered = styleFilters.length > 0 
+            ? allProducts.filter(p => styleFilters.includes(p.style)) 
+            : [...allProducts];
 
-        if (styleFilters.length > 0) {
-            filtered = filtered.filter(p => styleFilters.some(s => p.tags?.includes(s.toLowerCase())));
-        }
+        const parsePrice = (price: string) => parseFloat(price.replace('$', ''));
 
         switch (sortOption) {
             case 'price-asc':
-                filtered.sort((a, b) => a.price - b.price);
+                filtered.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
                 break;
             case 'price-desc':
-                filtered.sort((a, b) => b.price - a.price);
+                filtered.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
                 break;
             case 'newest':
             default:
-                // Assuming products have a created_at field. If not, this won't work.
-                // filtered.sort((a, b) => b.createdAt - a.createdAt);
+                // The mock data doesn't have a date, so we'll just use the default order for "newest"
                 break;
         }
 
         return filtered;
-    }, [products, styleFilters, sortOption]);
+    }, [styleFilters, sortOption]);
 
     const FilterSidebar = () => (
         <div className="space-y-6">
@@ -128,23 +109,15 @@ export default function Catalog() {
                     </aside>
 
                     <main className="lg:col-span-3">
-                        {loading ? (
-                            <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                                {[...Array(6)].map((_, i) => (
-                                    <div key={i} className="animate-pulse">
-                                        <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8"></div>
-                                        <div className="mt-4 h-4 bg-gray-200 rounded w-3/4"></div>
-                                        <div className="mt-2 h-4 bg-gray-200 rounded w-1/2"></div>
-                                    </div>
-                                ))}
-                            </div>
-                        ) : (
-                            <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                                {filteredAndSortedProducts.map((product) => (
+                        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                            {filteredAndSortedProducts.length > 0 ? (
+                                filteredAndSortedProducts.map((product) => (
                                     <ProductCard key={product.id} product={product} isSaved={savedProducts.includes(product.id)} />
-                                ))}
-                            </div>
-                        )}
+                                ))
+                            ) : (
+                                <p className="col-span-full text-center text-gray-500">No products match your filters.</p>
+                            )}
+                        </div>
                     </main>
                 </div>
                  <div className="mt-24">
